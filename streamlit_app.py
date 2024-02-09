@@ -6,28 +6,13 @@ st.set_page_config(
     layout="centered"
 )
 
-# Streamlit 앱의 소스코드에 CSS 적용
-st.markdown(
-    """
-    <style>
-        .stButton>div>div>div {
-            display: none !important;
-        }
-
-        .stAppHeader a {
-            display: none !important;
-        }
-
-        .reportview-container .main .block-container {
-            padding-top: 0px;
-            padding-right: 0px;
-            padding-left: 0px;
-            padding-bottom: 0px;
-        }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+# Add custom CSS to hide the GitHub icon
+hide_github_icon = """
+#GithubIcon {
+  visibility: hidden;
+}
+"""
+st.markdown(hide_github_icon, unsafe_allow_html=True)
 
 st.subheader(":robot_face: :blue[K-에듀파인 업무관리 AI챗봇]")
 
