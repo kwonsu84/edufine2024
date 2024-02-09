@@ -7,7 +7,7 @@ st.set_page_config(
     layout="centered"
 )
 
-with st.container():
+with st.container(border=True):
     st.subheader(":robot_face: :blue[K-에듀파인 업무관리 AI챗봇]")
     
     with st.chat_message("assistant"):
