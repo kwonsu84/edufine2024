@@ -1,19 +1,11 @@
 from openai import OpenAI
 import streamlit as st
 
-# Add custom CSS to hide the GitHub icon
-hide_github_icon = """
-#GithubIcon {
-  visibility: hidden;
-}
-"""
-st.markdown(hide_github_icon, unsafe_allow_html=True)
 
 st.set_page_config(
     page_title="K-에듀파인 업무관리 AI챗봇",
     layout="centered"
 )
-
 
 
 st.subheader(":robot_face: :blue[K-에듀파인 업무관리 AI챗봇]")
@@ -61,3 +53,4 @@ if prompt := st.chat_input("궁금한 내용을 입력하세요!"):
 
 
 
+st.image("https://static.streamlit.io/examples/owl.jpg")
