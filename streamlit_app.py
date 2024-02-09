@@ -49,7 +49,8 @@ with st.container():
             response = st.write_stream(stream)
         st.session_state.messages.append({"role": "assistant", "content": response})
 
-st.write("This is outside the container")
+with st.container():
+    st.write("This is outside the container")
 
 
 
