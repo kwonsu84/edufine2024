@@ -1,4 +1,2 @@
 openai
-ipython
-google-generativeai
 pymysql
