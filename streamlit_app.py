@@ -2,7 +2,7 @@ from openai import OpenAI
 import streamlit as st
 
 st.set_page_config(
-    page_title="K-에듀파인 업무관리 AI 챗봇",
+    page_title="K-에듀파인 업무관리 AI챗봇",
     layout="centered"
 )
 
