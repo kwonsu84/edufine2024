@@ -5,6 +5,7 @@ st.set_page_config(
     page_title="K-에듀파인 업무관리 AI 챗봇",
     layout="centered"
 )
+
 st.subheader(":robot_face: :blue[K-에듀파인 업무관리 AI챗봇]")
 
 with st.chat_message("assistant"):
