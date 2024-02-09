@@ -3,9 +3,7 @@ import streamlit as st
 
 st.set_page_config(
     page_title="K-에듀파인 업무관리 AI 챗봇",
-    layout="wide",
-    initial_sidebar_state="auto",
-    menu_items=None
+    layout="wide"
 )
 st.subheader(":robot_face: K-에듀파인 업무관리")
 st.caption(':grinning: _따라하기 메뉴얼을 학습하여 답변의 정확성을 높였습니다._')
