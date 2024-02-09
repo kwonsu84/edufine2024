@@ -53,4 +53,4 @@ if prompt := st.chat_input("궁금한 내용을 입력하세요!"):
 
 
 
-st.image("https://static.streamlit.io/examples/owl.jpg")
+
