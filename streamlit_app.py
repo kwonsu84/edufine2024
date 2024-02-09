@@ -1,7 +1,7 @@
 from openai import OpenAI
 import streamlit as st
 
-st.subheader(":robot_face: K-에듀파인 업무관리 따라하기 메뉴얼")
+st.subheader(":robot_face: K-에듀파인 업무관리")
 
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
