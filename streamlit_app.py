@@ -51,6 +51,6 @@ if prompt := st.chat_input("궁금한 내용을 입력하세요!"):
     st.session_state.messages.append({"role": "assistant", "content": response})
 
 
-
+st.write("TEST")
 
 
