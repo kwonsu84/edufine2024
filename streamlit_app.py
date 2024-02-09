@@ -38,3 +38,10 @@ if prompt := st.chat_input("궁금한 내용을 입력하세요!"):
         )
         response = st.write_stream(stream)
     st.session_state.messages.append({"role": "assistant", "content": response})
+
+st.set_page_config(
+    page_title="검증된 주식관련 데이터로 학습한 AI 챗봇",
+    layout="wide",
+    initial_sidebar_state="auto",
+    menu_items=None
+)
