@@ -25,9 +25,9 @@ for message in st.session_state.messages:
 
 
 if prompt := st.chat_input("궁금한 내용을 입력하세요!"):
-    st.session_state.messages.append({"role": "user", "content": prompt})
+    #st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
-        st.markdown(prompt+"1")
+        st.markdown(prompt)
 
     with st.chat_message("assistant"):
         stream = client.chat.completions.create(
@@ -39,7 +39,7 @@ if prompt := st.chat_input("궁금한 내용을 입력하세요!"):
             stream=True,
         )
         response = st.write_stream(stream)
-    st.session_state.messages.append({"role": "assistant", "content": response})
+    #st.session_state.messages.append({"role": "assistant", "content": response})
 
 
 
