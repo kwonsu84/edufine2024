@@ -51,11 +51,7 @@ with st.container(border=True):
 
 
 with st.expander("See explanation"):
-    st.write(\"\"\"
-        The chart above shows some numbers I picked for you.
-        I rolled actual dice for these, so they're *guaranteed* to
-        be random.
-    \"\"\")
+    st.write("ㅇㄹ미ㅏ렁마ㅣㅓㅇ라ㅣ머ㅏㅣ멍라ㅣㅓ미ㅏㅁ너라ㅣㅁ러ㅣㅏㅁ")
     st.image("https://static.streamlit.io/examples/dice.jpg")
 
 
