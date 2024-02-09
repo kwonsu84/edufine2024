@@ -15,7 +15,7 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
-st.session_state.messages.append({"role": "assistant", "content": "궁금한 내용을 입력해주세요!"})
+st.session_state.messages.append({"role": "assistant", "content": "가나다라"})
 
 if prompt := st.chat_input("궁금한 내용을 입력하세요!"):
     st.session_state.messages.append({"role": "user", "content": prompt})
