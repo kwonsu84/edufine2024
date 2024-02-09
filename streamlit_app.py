@@ -2,10 +2,7 @@ from openai import OpenAI
 import streamlit as st
 
 st.set_page_config(
-    page_title="검증된 주식관련 데이터로 학습한 AI 챗봇",
-    layout="wide",
-    initial_sidebar_state="auto",
-    menu_items=None
+    page_title="검증된 주식관련 데이터로 학습한 AI 챗봇"
 )
 
 st.subheader(":robot_face: K-에듀파인 업무관리")
