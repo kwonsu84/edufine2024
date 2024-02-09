@@ -9,9 +9,9 @@ st.set_page_config(
 
 with st.container(border=True):
     st.subheader(":robot_face: :blue[K-에듀파인 업무관리 AI챗봇]")
-        
-    with st.chat_message("system", avatar="🧑‍💻"):
-        st.write("👋 K-에듀파인 업무관리에 대해서 궁금한 내용을 모두 입력해주세요. 따라하기 메뉴얼을 기반으로 답변을 전달합니다.")
+    
+    with st.chat_message("system", avatar="😄"):
+        st.write("👋 K-에듀파인 업무관리에 대해서 궁금한 내용을 질문하세요. 따라하기 메뉴얼 내용을 기반으로 답변합니다. AI챗봇은 틀릴답을 전달할 수도 있습니다.")
     
     client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
     
@@ -50,8 +50,8 @@ with st.container(border=True):
         st.session_state.messages.append({"role": "assistant", "content": response})
 
 
-with st.expander("See explanation"):
+with st.expander("따라하기 메뉴얼 다운로드"):
     st.write("ㅇㄹ미ㅏ렁마ㅣㅓㅇ라ㅣ머ㅏㅣ멍라ㅣㅓ미ㅏㅁ너라ㅣㅁ러ㅣㅏㅁ")
-    st.image("https://static.streamlit.io/examples/dice.jpg")
+    #st.image("https://static.streamlit.io/examples/dice.jpg")
 
 
