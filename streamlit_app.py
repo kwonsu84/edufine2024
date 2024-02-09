@@ -20,12 +20,10 @@ if "messages" not in st.session_state:
     st.session_state.messages = []
 
 for message in st.session_state.messages:
-    if "user" == st.chat_message(message["role"]):
-        with st.chat_message(message["role"]):
-            st.markdown(message["content"])
+    with st.chat_message(message["role"]):
+        st.markdown(message["content"])
 
 
-st.session_state.messages.append({"role": "system", "content": "당신은 챗봇입니다. 답변은 10자 이내 답변 또는 예/아니오로 단답합니다."})
 if prompt := st.chat_input("궁금한 내용을 입력하세요!"):
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
@@ -37,6 +35,7 @@ if prompt := st.chat_input("궁금한 내용을 입력하세요!"):
             messages=[
                 {"role": m["role"], "content": m["content"]}
                 for m in st.session_state.messages
+                {"role": "system", "content": "당신은 챗봇입니다. 답변은 10자 이내 답변 또는 예/아니오로 단답합니다."}
             ],
             stream=True,
         )
