@@ -30,14 +30,15 @@ if prompt := st.chat_input("궁금한 내용을 입력하세요!"):
         st.markdown(prompt)
 
     with st.chat_message("assistant"):
+        messages = [
+        {"role": "system", "content": "당신은 챗봇입니다. 답변은 10자 이내 답변 또는 예/아니오로 단답합니다."}
+        ] + st.session_state.messages
+        
         stream = client.chat.completions.create(
             model=st.session_state["openai_model"],
-            messages=[
-                {"role": "system", "content": "당신은 챗봇입니다. 답변은 10자 이내 답변 또는 예/아니오로 단답합니다."}
-            ],
             messages=[                
                 {"role": m["role"], "content": m["content"]}
-                for m in st.session_state.messages
+                for m in messages
             ],
             stream=True,
         )
