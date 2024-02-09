@@ -25,7 +25,7 @@ for message in st.session_state.messages:
 
 
 if prompt := st.chat_input("궁금한 내용을 입력하세요!"):
-    #st.session_state.messages.append({"role": "user", "content": prompt})
+    st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.markdown(prompt)
 
@@ -33,6 +33,7 @@ if prompt := st.chat_input("궁금한 내용을 입력하세요!"):
         stream = client.chat.completions.create(
             model=st.session_state["openai_model"],
             messages=[
+                {"role": "system", "content": "당신은 챗봇입니다. 답변은 10자 이내 답변 또는 예/아니오로 단답합니다."},
                 {"role": m["role"], "content": m["content"]}
                 for m in st.session_state.messages
             ],
