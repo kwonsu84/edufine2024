@@ -5,10 +5,10 @@ st.set_page_config(
     page_title="K-에듀파인 업무관리 AI 챗봇",
     layout="centered"
 )
-st.subheader(":robot_face: :blue[K-에듀파인 업무관리] AI챗봇")
+st.subheader(":robot_face: :blue[K-에듀파인 업무관리 AI챗봇]")
 
 with st.chat_message("assistant"):
-    st.write("👋 K-에듀파인 업무관리에 대해서 궁금한 내용을 모두 입력해주세요.")
+    st.write("👋 K-에듀파인 업무관리에 대해서 궁금한 내용을 모두 입력해주세요. 따라하기 메뉴얼을 기반으로 답변을 전달합니다.")
 
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
