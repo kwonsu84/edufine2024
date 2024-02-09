@@ -3,6 +3,9 @@ import streamlit as st
 
 st.subheader(":robot_face: K-에듀파인 업무관리")
 
+with st.chat_message("user"):
+    st.write("Hello 👋")
+
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 if "openai_model" not in st.session_state:
@@ -10,8 +13,6 @@ if "openai_model" not in st.session_state:
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
-
-st.session_state.messages.append({"role": "assistant", "content": "가나다라"})
 
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
