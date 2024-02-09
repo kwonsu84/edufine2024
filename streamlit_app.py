@@ -16,7 +16,7 @@ with st.container(border=True):
     client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
     
     if "openai_model" not in st.session_state:
-        st.session_state["openai_model"] = "gpt-3.5-turbo-1106"
+        st.session_state["openai_model"] = "gpt-3.5-turbo-0125"
     
     if "messages" not in st.session_state:
         st.session_state.messages = []
@@ -33,7 +33,7 @@ with st.container(border=True):
         with st.chat_message("assistant"):
             #RAG형식으로 구현!
             messages = [
-            {"role": "system", "content": "당신은 챗봇입니다. 관련자료에 기반해서만 답변합니다."}
+            {"role": "system", "content": "당신은 한국교육학술정보원에서 제작한 챗봇입니다. 관련자료에 기반해서만 답변합니다. 정확하고 간략하게 답변합니다."}
             ] + st.session_state.messages + [
             {"role": "user", "content": "관련자료 : 대한민국 교육부와 그 예하 준정부기관인 한국교육학술정보원의 소관 하에 운영되고 있는 국가관리회계시스템. 명칭 중 Edu는 교육(Education)을, Fine은 재정(Finance)을 뜻한다. 주소는 각 시·도교육청 주소 앞에 klef.을 붙이면 된다. 해당 교육청 내부망에서만 접속할 수 있다."}
             ]
@@ -53,5 +53,6 @@ with st.container(border=True):
 with st.expander("따라하기 메뉴얼 다운로드"):
     st.write("ㅇㄹ미ㅏ렁마ㅣㅓㅇ라ㅣ머ㅏㅣ멍라ㅣㅓ미ㅏㅁ너라ㅣㅁ러ㅣㅏㅁ")
     #st.image("https://static.streamlit.io/examples/dice.jpg")
+    st.page_link("http://www.google.com", label="Google", icon="🌎")
 
 
