@@ -6,8 +6,7 @@ st.caption(':grinning: _따라하기 메뉴얼을 학습하여 답변의 정확�
 
 st.set_page_config(
     page_title="K-에듀파인 업무관리",
-    layout="wide",
-    menu_items=None
+    layout="wide"
 )
 
 with st.chat_message("assistant"):
