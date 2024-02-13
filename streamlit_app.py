@@ -51,8 +51,10 @@ with st.container(border=True):
 
 
 with st.expander("따라하기 메뉴얼 다운로드"):
-    st.write("ㅇㄹ미ㅏ렁마ㅣㅓㅇ라ㅣ머ㅏㅣ멍라ㅣㅓ미ㅏㅁ너라ㅣㅁ러ㅣㅏㅁ")
+    st.write("2024년 업무관리 따라하기 메뉴얼을 다운로드 하세요.")
     #st.image("https://static.streamlit.io/examples/dice.jpg")
+    st.page_link("http://www.google.com", label="2024년 업무관리 메뉴얼01", icon="🌎")
+    st.page_link("http://www.google.com", label="2024년 문서관리 메뉴얼01", icon="🌎")
     st.page_link("http://www.google.com", label="Google", icon="🌎")
 
 
