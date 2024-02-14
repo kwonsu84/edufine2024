@@ -1,3 +1,4 @@
 openai
 pymysql
 sentence_transformers
+streamlit-chromadb-connection
