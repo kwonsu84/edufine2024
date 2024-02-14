@@ -1,14 +1,24 @@
 from openai import OpenAI
 import streamlit as st
 from sentence_transformers import SentenceTransformer
+import chromadb
+
+def get_db_data(user_question):
+    client = chromadb.HttpClient(host='datalab.dscloud.me', port=8080)
+    collection = client.get_or_create_collection("edufine2024")
+    
+    model = SentenceTransformer('snunlp/KR-SBERT-V40K-klueNLI-augSTS')
+    
+    question = "관련자료 : 대한민국 교육부와 그 예하 준정부기관인 한국교육학술정보원의 소관 하에 운영되고 있는 국가관리회계시스템. 명칭 중 Edu는 교육(Education)을, Fine은 재정(Finance)을 뜻한다. 주소는 각 시·도교육청 주소 앞에 klef.을 붙이면 된다. 해당 교육청 내부망에서만 접속할 수 있다."
+    return question
+
+#----------------------------------------------------------------------------------------------
 
 
 st.set_page_config(
     page_title="K-에듀파인 업무관리 AI챗봇",
     layout="centered"
 )
-
-model = SentenceTransformer('snunlp/KR-SBERT-V40K-klueNLI-augSTS')
 
 with st.container(border=True):
     st.subheader(":robot_face: :blue[K-에듀파인 업무관리 AI챗봇]")
@@ -38,7 +48,7 @@ with st.container(border=True):
             messages = [
             {"role": "system", "content": "너는 한국교육학술정보원의 'K-에듀파인 업무관리 시스템' 챗봇이다. '관련자료'에 기반해서만 답변한다. 질문자들은 'K-에듀파인 업무관리 시스템' 사용법에 대해서 질문한다. 너는 친절하고 정확하게 답변한다. 시스템 사용법 문의와 관련없는 사용자 질문에 대해서는 답변하지 않는다."}
             ] + st.session_state.messages + [
-            {"role": "user", "content": "관련자료 : 대한민국 교육부와 그 예하 준정부기관인 한국교육학술정보원의 소관 하에 운영되고 있는 국가관리회계시스템. 명칭 중 Edu는 교육(Education)을, Fine은 재정(Finance)을 뜻한다. 주소는 각 시·도교육청 주소 앞에 klef.을 붙이면 된다. 해당 교육청 내부망에서만 접속할 수 있다."}
+            {"role": "user", "content": get_db_data(prompt)}
             ]
             
             stream = client.chat.completions.create(
