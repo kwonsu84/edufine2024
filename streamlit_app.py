@@ -18,7 +18,7 @@ def get_db_data(user_question):
     url = f"{base_url}?{encoded_params}"
     response = requests.get(url)
     
-    question = "관련자료 : "
+    question = ""
     question += response.text
       
     return question
