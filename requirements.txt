@@ -1,3 +1,4 @@
 openai
 pymysql
 chromadb-client
+SentenceTransformer
