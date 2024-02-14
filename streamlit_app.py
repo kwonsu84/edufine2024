@@ -2,6 +2,10 @@ from openai import OpenAI
 import streamlit as st
 from sentence_transformers import SentenceTransformer
 import chromadb
+package__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 
 def get_db_data(user_question):
     client = chromadb.HttpClient(host='datalab.dscloud.me', port=8080)
