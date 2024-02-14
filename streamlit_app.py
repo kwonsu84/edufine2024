@@ -1,8 +1,11 @@
 from openai import OpenAI
 import streamlit as st
-from urllib.parse import urlencode
+from IPython.display import display
+from IPython.display import Markdown
+import textwrap
+import pathlib
 import requests
-
+from urllib.parse import urlencode
 
 
 def get_db_data(user_question):
