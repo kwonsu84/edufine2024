@@ -1,4 +1,4 @@
 openai
 pymysql
-chromadb==0.3.29
+chromadb
 sentence_transformers
