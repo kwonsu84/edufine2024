@@ -1,4 +1,5 @@
 openai
 pymysql
 chromadb-client
+fastapi
 sentence_transformers
