@@ -1,11 +1,14 @@
 from openai import OpenAI
 import streamlit as st
+from sentence_transformers import SentenceTransformer
 
 
 st.set_page_config(
     page_title="K-에듀파인 업무관리 AI챗봇",
     layout="centered"
 )
+
+model = SentenceTransformer('snunlp/KR-SBERT-V40K-klueNLI-augSTS')
 
 with st.container(border=True):
     st.subheader(":robot_face: :blue[K-에듀파인 업무관리 AI챗봇]")
