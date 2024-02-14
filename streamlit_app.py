@@ -11,7 +11,7 @@ with st.container(border=True):
     st.subheader(":robot_face: :blue[K-에듀파인 업무관리 AI챗봇]")
     
     with st.chat_message("system", avatar="😄"):
-        st.write("👋 K-에듀파인 업무관리에 대해서 궁금한 내용을 질문하세요. 관련자료(따라하기 메뉴얼 내용)를 기반으로 답변합니다. AI챗봇의 답변은 정확하지 않을 수 있습니다.")
+        st.write("안녕하세요. 👋 K-에듀파인 업무관리에 대해서 궁금한 내용을 질문하세요. 관련자료(따라하기 메뉴얼, 교육동영상 등)를 기반으로 답변합니다. 시스템 오류는 사용자지원시스템을 통해 문의하셔야 됩니다.")
     
     client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
     
