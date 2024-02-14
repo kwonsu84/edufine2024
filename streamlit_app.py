@@ -9,7 +9,7 @@ from urllib.parse import urlencode
 
 
 def get_db_data(user_question):
-    base_url = "http://datalab.dscloud.me:8080"
+    base_url = "http://datalab.dscloud.me:18080"
     params = {
         'user_question': user_question
     }
