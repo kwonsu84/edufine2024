@@ -1,12 +1,19 @@
 from openai import OpenAI
 import streamlit as st
 from sentence_transformers import SentenceTransformer
-import chromadb
+from streamlit_chromadb_connection.chromadb_connection import ChromadbConnection
 
 
 
 def get_db_data(user_question):
-    client = chromadb.HttpClient(host='datalab.dscloud.me', port=8080)
+    configuration = {
+        "client": "HttpClient",
+        "host": "datalab.dscloud.me",
+        "port": 8080,
+    }
+    
+    client = st.connection(name="http_connection", type=ChromadbConnection, **configuration)
+
     collection = client.get_or_create_collection("edufine2024")
     
     model = SentenceTransformer('snunlp/KR-SBERT-V40K-klueNLI-augSTS')
