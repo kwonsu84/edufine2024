@@ -71,9 +71,10 @@ with st.container(border=True):
         st.session_state.messages.append({"role": "assistant", "content": response})
 
 
-with st.expander("2024년 따라하기 메뉴얼 다운로드"):
-    st.write("2024년 업무관리 따라하기 메뉴얼을 다운로드 하세요.")
+with st.expander("관련자료"):
+    st.write("1. 2024년 업무관리 따라하기 메뉴얼")
     #st.image("https://static.streamlit.io/examples/dice.jpg")
     st.page_link("http://www.google.com", label="2024년 업무관리 메뉴얼01", icon="🌎")
+    st.write("2. 2024년 업무관리 유튜브 교육동영상")
 
 
