@@ -69,7 +69,7 @@ with st.container(border=True):
             )
             response = st.write_stream(stream)
         st.session_state.messages.append({"role": "assistant", "content": response})
-
+        st.experimental_rerun()
 
 with st.expander("관련자료"):
     st.write("1. 2024년 업무관리 따라하기 메뉴얼")
