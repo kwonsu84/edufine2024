@@ -66,6 +66,7 @@ with st.container(border=True):
                     for m in messages
                 ],
                 stream=True,
+                timeout=10
             )
             response = st.write_stream(stream)
         st.session_state.messages.append({"role": "assistant", "content": response})
