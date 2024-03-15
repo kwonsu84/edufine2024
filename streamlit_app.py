@@ -36,9 +36,6 @@ with st.container(border=True):
     
     client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
     
-    if "openai_model" not in st.session_state:
-        st.session_state["openai_model"] = "gpt-4-0125-preview"#"gpt-3.5-turbo-0125"
-    
     if "messages" not in st.session_state:
         st.session_state.messages = []
     
@@ -61,7 +58,7 @@ with st.container(border=True):
             ] + st.session_state.messages
             
             stream = client.chat.completions.create(
-                model="gpt-4-0125-preview",#st.session_state["openai_model"],
+                model="gpt-4-0125-preview",
                 messages=[                
                     {"role": m["role"], "content": m["content"]}
                     for m in messages
