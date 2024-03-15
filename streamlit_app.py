@@ -64,7 +64,6 @@ with st.container(border=True):
                     for m in messages
                 ],
                 stream=True,
-                timeout=20,
                 temperature=0.0
             )
             response = st.write_stream(stream)
