@@ -37,7 +37,7 @@ with st.container(border=True):
     client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
     
     if "openai_model" not in st.session_state:
-        st.session_state["openai_model"] = "gpt-3.5-turbo-0125"
+        st.session_state["openai_model"] = "gpt-4-0125-preview"#"gpt-3.5-turbo-0125"
     
     if "messages" not in st.session_state:
         st.session_state.messages = []
