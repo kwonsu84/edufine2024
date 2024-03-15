@@ -61,7 +61,7 @@ with st.container(border=True):
             ] + st.session_state.messages
             
             stream = client.chat.completions.create(
-                model=st.session_state["openai_model"],
+                model="gpt-4-0125-preview"#st.session_state["openai_model"],
                 messages=[                
                     {"role": m["role"], "content": m["content"]}
                     for m in messages
