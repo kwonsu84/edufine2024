@@ -76,6 +76,6 @@ with st.container(border=True):
         st.session_state.messages.append({"role": "assistant", "content": response})
         st.experimental_rerun()
 
-
+st.write("2024년 업무관리 따라하기 메뉴얼")
 
 
