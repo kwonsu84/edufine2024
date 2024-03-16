@@ -77,9 +77,8 @@ with st.container(border=True):
         st.experimental_rerun()
 
 with st.expander("관련자료"):
-    st.write("1. 2024년 업무관리 따라하기 메뉴얼")
+    st.write("2024년 업무관리 따라하기 메뉴얼")
     #st.image("https://static.streamlit.io/examples/dice.jpg")
-    st.page_link("http://www.google.com", label="2024년 업무관리 메뉴얼01", icon="🌎")
-    st.write("2. 2024년 업무관리 유튜브 교육동영상")
+    st.page_link("https://www.youtube.com/playlist?list=PLnNTGUWLwu1vNmfNT8Oq7_m-uzhquAEFZ", label="2024년 업무관리 교육동영상", icon="🌎")
 
 
