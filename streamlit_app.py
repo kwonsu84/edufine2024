@@ -76,6 +76,10 @@ with st.container(border=True):
         st.session_state.messages.append({"role": "assistant", "content": response})
         st.experimental_rerun()
 
-st.write("2024년 업무관리 따라하기 메뉴얼")
-
+st.caption("주의사항 : 이 챗봇은 '2024년 업무관리 따라하기 메뉴얼', 교육용동영상(유튜브 탑재), 사용자지원서비스 데이터로 학습하였습니다. 학습데이터가 부족한 영역에 대한 질문의 경우 잘못된 대답을 할 가능성이 있습니다. 이 챗봇은 실험버전으로 KERIS에서 정식으로 서비스하는 것이 아닙니다.")
+#with st.expander("관련자료"):
+#    st.write("2024년 업무관리 따라하기 메뉴얼")
+    #st.image("https://static.streamlit.io/examples/dice.jpg")
+#    st.page_link("https://www.youtube.com/playlist?list=PLnNTGUWLwu1vNmfNT8Oq7_m-uzhquAEFZ", label="2024년 업무관리 교육동영상", icon="🌎")
+#    st.page_link("https://help.klef.go.kr/keris_ui/main.do", label="K-에듀파인 사용자지원서비스", icon="🌎")
 
