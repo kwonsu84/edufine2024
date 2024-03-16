@@ -57,7 +57,7 @@ with st.container(border=True):
             #{"role": "system", "content": "반드시 답변의 마지막에 사용자(질문자)가 추가 내용을 확인할 수 있도록 너의 답변과 관련성 높은 관련자료들의 '출처'와 '출처 내 위치'를 포함한다. 답변 마지막에 한줄 뛰고 다음과 같은 형식으로 출력한다. '출처: <관련자료의 출처>, 위치: <관련자료의 출처 내 위치>', 만약 제공할 출처와 위치가 여러개라면 한줄씩 나열한다."},
             {"role": "system", "content": "관련자료 : " + get_db_data(prompt)}
             ] + st.session_state.messages
-            
+            st.experimental_rerun()
             stream = client.chat.completions.create(
                 model="gpt-4-0125-preview",
                 messages=[                
@@ -67,7 +67,7 @@ with st.container(border=True):
                 stream=True,
                 temperature=0.0
             )
-            st.experimental_rerun()
+            
             response = st.write_stream(stream)
         st.session_state.messages.append({"role": "assistant", "content": response})
         
