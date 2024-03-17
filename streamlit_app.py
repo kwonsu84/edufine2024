@@ -35,7 +35,7 @@ with st.container(border=True):
         st.write("안녕하세요! 👋 K-에듀파인 업무관리에 대해서 궁금한 내용을 질문하세요.")
 
     with st.chat_message("system", avatar="❗"):
-        st.write("이 챗봇은 '실험버전'입니다. 답변에 오류가 있을 수 있습니다.")
+        st.write("이 챗봇은 '실험버전'입니다.")
     
     client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
     
