@@ -73,7 +73,14 @@ with st.container(border=True):
             - 시스템 사용법 문의와 관련없는 질문에 대해서는 답변하지 않는다. 정확한 답변만 작성하고 '업무관리 관련자료'에 내용이 없는 질문에 대해서는 알지 못한다고 답한다.
             - 너는 시용자(질문자)가 시스템 오류나 개선사항에 대한 질문을 할 경우 사용자지원서비스(help.klef.go.kr)에 접속하여 글을 남기면 도움을 받을 수 있다고 답변한다.
             """},
-            {"role": "system", "content": "'업무관리 관련자료' : " + get_db_data(prompt)}
+            {"role": "system", "content": "'업무관리 관련자료' : " + get_db_data(prompt)},
+            {"role": "system", "content": """
+            ## 현재 시스템 오류 리포트 자료
+            - 
+
+            ## 시스템 개선예정 자료
+            - 
+            """}
             ] + st.session_state.messages
             
             stream = client.chat.completions.create(
