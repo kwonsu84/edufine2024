@@ -101,9 +101,3 @@ with st.container(border=True):
 st.caption("▫︎ 이 챗봇은 '2024년 업무관리 따라하기 메뉴얼', '업무관리 교육용동영상' 등의 데이터로 학습하였습니다.")
 st.caption("▫︎ 학습데이터가 부족한 영역에 대해선 오답을 말할 수 있습니다.")
 st.caption("▫︎ 현재 실험버전으로 정식으로 서비스하는 것이 아닙니다. 언제든 서비스가 종료될 수 있습니다.")
-#with st.expander("관련자료"):
-#    st.write("2024년 업무관리 따라하기 메뉴얼")
-    #st.image("https://static.streamlit.io/examples/dice.jpg")
-#    st.page_link("https://www.youtube.com/playlist?list=PLnNTGUWLwu1vNmfNT8Oq7_m-uzhquAEFZ", label="2024년 업무관리 교육동영상", icon="🌎")
-#    st.page_link("https://help.klef.go.kr/keris_ui/main.do", label="K-에듀파인 사용자지원서비스", icon="🌎")
-
