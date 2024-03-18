@@ -29,7 +29,7 @@ st.set_page_config(
 )
 
 with st.container(border=True):
-    st.subheader(":robot_face: :blue[K-에듀파인 업무관리 AI챗봇]")
+    st.subheader(":robot_face: :blue[업무관리 AI챗봇](파일럿)")
     
     with st.chat_message("system", avatar="😄"):
         st.write("안녕하세요! 👋 K-에듀파인 업무관리에 대해서 궁금한 내용을 질문하세요.")
