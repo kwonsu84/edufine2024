@@ -36,6 +36,12 @@ with st.container(border=True):
 
     with st.chat_message("system", avatar="❗"):
         st.write("이 챗봇은 '실험버전'입니다.")
+
+    with st.chat_message("user"):
+        st.write("수신문서를 배부하려는데 어디로 보내야 될지 모르겠는데?")
+
+    with st.chat_message("assistant"):
+        st.write("수신문서를 배부할 때 담당 부서가 불명확한 경우, '담당부서확인' 기능을 사용하여 해당 부서로 확인 요청을 할 수 있습니다. (생략)")
     
     client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
     
