@@ -90,7 +90,7 @@ with st.container(border=True):
             ] + st.session_state.messages
             
             stream = client.chat.completions.create(
-                model="gpt-4-0125-preview",#"gpt-3.5-turbo-0125",
+                model="gpt-3.5-turbo-0125",#"gpt-4-0125-preview",
                 messages=[                
                     {"role": m["role"], "content": m["content"]}
                     for m in messages
