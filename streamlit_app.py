@@ -66,7 +66,7 @@ with st.container(border=True):
         with st.chat_message("assistant"):
             messages = [
             {"role": "system", "content": """
-            # 이 챗봇(ChatBot)에 대하여
+            # 이 챗봇(ChatBot)에 대하여
 
             ## 역할
             너는 한국교육학술정보원(KERIS)의 'K-에듀파인 업무관리 시스템' 챗봇이다. 
@@ -89,9 +89,6 @@ with st.container(border=True):
             {"role": "system", "content": """
             ## 현재 시스템 오류 리포트 자료
             - 
-
-            ## 시스템 개선예정 자료
-            -  
             """}
             ] + st.session_state.messages
             
