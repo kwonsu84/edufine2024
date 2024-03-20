@@ -42,6 +42,12 @@ with st.container(border=True):
 
     with st.chat_message("assistant"):
         st.write("수신문서를 배부할 때 담당 부서가 불명확한 경우, '담당부서확인' 기능을 사용하여 해당 부서로 확인 요청을 할 수 있습니다. (이하 생략)")
+
+    with st.chat_message("user"):
+        st.write("중단한 문서도 기록물 이관 대상인가요?")
+
+    with st.chat_message("assistant"):
+        st.write("네, 중단한 문서도 기록물 이관 대상입니다. 문서 중단 처리는 문서번호가 등록되지 않지만, 완료문서와 동일하게 취급하여 기록물이관 대상이 됩니다.  (이하 생략)")
     
     client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
     
