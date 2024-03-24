@@ -1,2 +1,3 @@
-openai
-ipython
+langchain
+langchain_openai
+nest_asyncio
