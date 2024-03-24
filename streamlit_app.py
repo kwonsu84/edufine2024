@@ -110,7 +110,7 @@ with st.container(border=True):
         """})
         
         st.session_state.messages.append({"role": "system", "content": """
-        ## 답변 참고자료들 : 
+        ## 업무관리 교육자료 : 
         """ + get_db_data(prompt)})
         
         st.chat_message("user").write(prompt)
