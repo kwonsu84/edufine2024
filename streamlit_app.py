@@ -52,10 +52,10 @@ with st.container(border=True):
 
     #if "messages" not in st.session_state:
     with st.chat_message("system", avatar="😄"):
-        st.write("안녕하세요! 👋 K-에듀파인 업무관리에 대해서 궁금한 내용을 질문하세요.")
+        st.write("안녕하세요! 👋 아래 샘플 질문을 참고해서 궁금한 내용을 질문하세요.")
 
-    with st.chat_message("system", avatar="❗"):
-        st.write("이 챗봇은 '실험버전'입니다.")
+    #with st.chat_message("system", avatar="❗"):
+    #    st.write("이 챗봇은 '실험버전'입니다.")
 
     with st.chat_message("user"):
         st.write("수신문서를 배부하려는데 어디로 보내야 될지 모르겠는데?")
