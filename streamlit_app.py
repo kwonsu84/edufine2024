@@ -44,7 +44,7 @@ def get_db_data(user_question):
 
 st.set_page_config(
     page_title="K-에듀파인 업무관리 AI챗봇",
-    layout="centered"
+    layout="wide"
 )
 
 with st.container(border=True):
