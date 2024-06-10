@@ -117,7 +117,7 @@ with st.container(border=True):
     
         with st.chat_message("assistant"):
             stream_handler = StreamHandler(st.empty())
-            llm = ChatOpenAI(openai_api_key=os.environ["OPENAI_API_KEY"], model="gpt-4-turbo", temperature=0.0, streaming=True, callbacks=[stream_handler])
+            llm = ChatOpenAI(openai_api_key=os.environ["OPENAI_API_KEY"], model="gpt-4o", temperature=0.0, streaming=True, callbacks=[stream_handler])
             response = llm.invoke(st.session_state.messages)
             st.session_state.messages.append({"role": "assistant", "content": response.content})
 
