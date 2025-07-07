@@ -48,7 +48,8 @@ st.set_page_config(
 )
 
 
-st.subheader("🤖 :blue[업무관리 AI챗봇](파일럿)")
+#st.subheader("🤖 :blue[업무관리 AI챗봇](파일럿)")
+st.title("🤖 :blue[업무관리 AI챗봇](파일럿)")
 
 #if "messages" not in st.session_state:
 with st.chat_message("system", avatar="😄"):
