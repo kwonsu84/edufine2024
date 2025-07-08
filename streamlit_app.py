@@ -117,7 +117,7 @@ if prompt := st.chat_input("궁금한 내용을 입력하세요!"):
 
     with st.chat_message("assistant"):
         stream_handler = StreamHandler(st.empty())
-        llm = ChatOpenAI(openai_api_key=os.environ["OPENAI_API_KEY"], model="gpt-4.1", temperature=0.0, streaming=True, callbacks=[stream_handler])
+        llm = ChatOpenAI(openai_api_key=os.environ["OPENAI_API_KEY"], model="gpt-4.1-nano", temperature=0.0, streaming=True, callbacks=[stream_handler])
         response = llm.invoke(st.session_state.messages)
         st.session_state.messages.append({"role": "assistant", "content": response.content})
 
