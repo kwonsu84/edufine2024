@@ -43,12 +43,12 @@ def get_db_data(user_question):
 #with st.sidebar:
 
 st.set_page_config(
-    page_title="K-에듀파인 업무관리 AI챗봇",
+    page_title="2024년 K-에듀파인 업무관리 AI챗봇",
     layout="wide"
 )
 
 #st.subheader("🤖 :blue[업무관리 AI챗봇](파일럿)")
-st.title(":blue[업무관리 AI챗봇](파일럿)")
+st.title(":blue[2024년 업무관리 AI챗봇](파일럿)")
 
 #if "messages" not in st.session_state:
 with st.chat_message("system", avatar="😄"):
